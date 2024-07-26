@@ -39,6 +39,7 @@ var (
 	getMaxCreateRev int64
 	getMinModRev    int64
 	getMaxModRev    int64
+	fastCount      bool
 )
 
 // NewGetCommand returns the cobra command for "get".
@@ -61,6 +62,7 @@ func NewGetCommand() *cobra.Command {
 	cmd.Flags().BoolVar(&printValueOnly, "print-value-only", false, `Only write values when using the "simple" output format`)
 	cmd.Flags().Int64Var(&getMinCreateRev, "min-create-rev", 0, "Minimum create revision")
 	cmd.Flags().Int64Var(&getMaxCreateRev, "max-create-rev", 0, "Maximum create revision")
+	cmd.Flags().BoolVar(&fastCount, "fast-count", false, `Get only matching limit items`)
 	cmd.Flags().Int64Var(&getMinModRev, "min-mod-rev", 0, "Minimum modification revision")
 	cmd.Flags().Int64Var(&getMaxModRev, "max-mod-rev", 0, "Maximum modification revision")
 
@@ -216,5 +218,10 @@ func getGetOp(args []string) (string, []clientv3.OpOption) {
 		opts = append(opts, clientv3.WithMaxModRev(getMaxModRev))
 	}
 
+	if fastCount {
+		opts = append(opts, clientv3.WithFastCount())
+		fmt.Printf("fastCount enabled")
+	}
+	
 	return key, opts
 }
