@@ -5,19 +5,19 @@ go 1.21
 toolchain go1.21.10
 
 require (
+	github.com/alexfalkowski/gocovmerge v1.2.7
 	github.com/alexkohler/nakedret v1.0.0
 	github.com/chzchzchz/goword v0.0.0-20170907005317-a9744cb52b03
 	github.com/coreos/license-bill-of-materials v0.0.0-20190913234955-13baff47494e
 	github.com/gogo/protobuf v1.3.2
 	github.com/gordonklaus/ineffassign v0.0.0-20200809085317-e36bfde3bb78
-	github.com/grpc-ecosystem/grpc-gateway v1.14.6
-	github.com/gyuho/gocovmerge v0.0.0-20171205171859-50c7e6afd535
+	github.com/grpc-ecosystem/grpc-gateway v1.16.0
 	github.com/hexfusion/schwag v0.0.0-20170606222847-b7d0fc9aadaa
 	github.com/mdempsky/unconvert v0.0.0-20200228143138-95ecdbfc0b5f
 	github.com/mgechev/revive v1.0.2
 	github.com/mikefarah/yq/v3 v3.0.0-20201125113350-f42728eef735
 	go.etcd.io/gofail v0.1.0
-	go.etcd.io/protodoc v0.0.0-20180829002748-484ab544e116
+	go.etcd.io/protodoc v0.0.0-20231003092203-c231a1243ac5
 	honnef.co/go/tools v0.0.0-20190523083050-ea95bdfd59fc
 	mvdan.cc/unparam v0.0.0-20200501210554-b37ab49443f7
 )
@@ -58,11 +58,12 @@ require (
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/trustmaster/go-aspell v0.0.0-20200701131845-c2b1f55bec8f // indirect
 	go.mongodb.org/mongo-driver v1.3.0 // indirect
-	golang.org/x/mod v0.3.0 // indirect
-	golang.org/x/net v0.0.0-20201021035429-f5854403a974 // indirect
-	golang.org/x/sys v0.0.0-20220715151400-c0bba94af5f8 // indirect
-	golang.org/x/text v0.3.3 // indirect
-	golang.org/x/tools v0.0.0-20210106214847-113979e3529a // indirect
+	golang.org/x/mod v0.20.0 // indirect
+	golang.org/x/net v0.28.0 // indirect
+	golang.org/x/sync v0.8.0 // indirect
+	golang.org/x/sys v0.23.0 // indirect
+	golang.org/x/text v0.17.0 // indirect
+	golang.org/x/tools v0.24.0 // indirect
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	google.golang.org/genproto v0.0.0-20201008135153-289734e2e40c // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
